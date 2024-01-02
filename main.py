@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from menu import Ui_MenuWindow
 
 
 class Ui_MainWindow(object):
@@ -19,7 +20,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(-350, 90, 581, 481))
+        self.label.setGeometry(QtCore.QRect(-340, 50, 581, 481))
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("asset/blob.png"))
         self.label.setObjectName("label")
@@ -29,7 +30,7 @@ class Ui_MainWindow(object):
         self.label_2.setPixmap(QtGui.QPixmap("asset/blob.png"))
         self.label_2.setObjectName("label_2")
         self.startButton = QtWidgets.QPushButton(self.centralwidget)
-        self.startButton.setGeometry(QtCore.QRect(560, 420, 200, 80))
+        self.startButton.setGeometry(QtCore.QRect(580, 420, 200, 80))
         self.startButton.setMinimumSize(QtCore.QSize(200, 80))
         self.startButton.setStyleSheet("QPushButton {\n"
 "    background-color: #1E7878;\n"
@@ -61,18 +62,54 @@ class Ui_MainWindow(object):
 "    \n"
 "}")
         self.startButton.setObjectName("startButton")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(220, 140, 911, 231))
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap("asset/title.png"))
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(210, 420, 271, 271))
+        self.label_4.setText("")
+        self.label_4.setPixmap(QtGui.QPixmap("asset/friedrice2.png"))
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(840, 410, 281, 281))
+        self.label_5.setText("")
+        self.label_5.setPixmap(QtGui.QPixmap("asset/spaghetti.png"))
+        self.label_5.setObjectName("label_5")
+        self.label_2.raise_()
+        self.startButton.raise_()
+        self.label_3.raise_()
+        self.label.raise_()
+        self.label_4.raise_()
+        self.label_5.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+
+        self.startButton.clicked.connect(self.next_window)
+
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.startButton.setText(_translate("MainWindow", "START"))
+
+    def next_window(self):
+        menu_window = AnotherMainWindow()
+        menu_window.show()
+        MainWindow.hide()
+
+    
+class AnotherMainWindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.ui = Ui_MenuWindow()
+        self.ui.setupUi(self)
 
 
 if __name__ == "__main__":

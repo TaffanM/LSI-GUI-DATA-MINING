@@ -1,0 +1,1 @@
+Pemrosesan bahasa alami (NLP) adalah bidang studi yang mengeksplorasi interaksi antara komputer dan bahasa manusia. NLP digunakan dalam aplikasi seperti chatbots, terjemahan bahasa, dan analisis sentimen.

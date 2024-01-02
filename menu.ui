@@ -36,11 +36,15 @@ color: #FFFFFF;
       <widget class="QLabel" name="label">
        <property name="font">
         <font>
-         <pointsize>12</pointsize>
+         <pointsize>-1</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">margin-top: 20px;
+font-size: 16px;</string>
        </property>
        <property name="text">
         <string>LSI (Latest Semantic Index)</string>
@@ -159,7 +163,7 @@ color: #FFFFFF;
      <string notr="true">background-color: rgb(76, 181, 185);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_2">
@@ -212,6 +216,81 @@ color: #FFFFFF;
        <string>Preprocessing</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	font-size: 18px;
+	font-family: &quot;Poppins&quot;;
+	font-weight: bold;
+	margin: 0px 10px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Browse File</string>
+      </property>
+     </widget>
+     <widget class="QListView" name="listView_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>150</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>100</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	font-size: 18px;
+	font-family: &quot;Poppins&quot;;
+	font-weight: bold;
+	margin: 0px 10px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Preprocess</string>
+      </property>
+     </widget>
+     <widget class="QListView" name="listView_3">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>150</y>
+        <width>671</width>
+        <height>571</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>323</x>
+        <y>100</y>
+        <width>20</width>
+        <height>621</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_5">
      <widget class="QLabel" name="label_4">
@@ -238,6 +317,37 @@ color: #FFFFFF;
        <string>Stemming</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	font-size: 18px;
+	font-family: &quot;Poppins&quot;;
+	font-weight: bold;
+	margin: 0px 10px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Stemming</string>
+      </property>
+     </widget>
+     <widget class="QListView" name="listView_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>160</y>
+        <width>1021</width>
+        <height>571</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_6">
      <widget class="QLabel" name="label_5">
@@ -259,6 +369,67 @@ color: #FFFFFF;
       </property>
       <property name="styleSheet">
        <string notr="true">color: #FFFFFF</string>
+      </property>
+      <property name="text">
+       <string>Temu Balik</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>421</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins</family>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #FFFFFF</string>
+      </property>
+      <property name="text">
+       <string>Result (Cosine Similarity)</string>
+      </property>
+     </widget>
+     <widget class="QListView" name="listView">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>611</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>170</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	font-size: 18px;
+	font-family: &quot;Poppins&quot;;
+	font-weight: bold;
+	margin: 0px 10px;
+}</string>
       </property>
       <property name="text">
        <string>Temu Balik</string>
