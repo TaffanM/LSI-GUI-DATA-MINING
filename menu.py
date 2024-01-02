@@ -11,11 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1353, 753)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_MenuWindow(object):
+    def setupUi(self, MenuWindow):
+        MenuWindow.setObjectName("MenuWindow")
+        MenuWindow.resize(1353, 753)
+        self.centralwidget = QtWidgets.QWidget(MenuWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(-4, 0, 261, 761))
@@ -147,22 +147,142 @@ class Ui_MainWindow(object):
         self.label_5.setStyleSheet("color: #FFFFFF")
         self.label_5.setObjectName("label_5")
         self.stackedWidget.addWidget(self.page_6)
+        MenuWindow.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(MenuWindow)
+
+        self.pushButton_5.clicked.connect(self.exit_window)
+
+        self.stackedWidget.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(MenuWindow)
+
+    def retranslateUi(self, MenuWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MenuWindow.setWindowTitle(_translate("MenuWindow", "MenuWindow"))
+        self.label.setText(_translate("MenuWindow", "LSI (Latest Semantic Index)"))
+        self.pushButton.setText(_translate("MenuWindow", "Home"))
+        self.pushButton_2.setText(_translate("MenuWindow", "Preprocessing"))
+        self.pushButton_3.setText(_translate("MenuWindow", "Stemming"))
+        self.pushButton_4.setText(_translate("MenuWindow", "Temu Balik"))
+        self.pushButton_5.setText(_translate("MenuWindow", "Exit"))
+        self.label_2.setText(_translate("MenuWindow", "Home"))
+        self.label_3.setText(_translate("MenuWindow", "Preprocessing"))
+        self.label_4.setText(_translate("MenuWindow", "Stemming"))
+        self.label_5.setText(_translate("MenuWindow", "Temu Balik"))
+
+    def exit_window(self):
+        MenuWindow.hide()
+        MainWindow.show()
+
+        
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1353, 753)
+        MainWindow.setStyleSheet("background-color: rgb(2, 159, 164);")
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(-340, 50, 581, 481))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap("asset/blob.png"))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(1130, 260, 581, 481))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap("asset/blob.png"))
+        self.label_2.setObjectName("label_2")
+        self.startButton = QtWidgets.QPushButton(self.centralwidget)
+        self.startButton.setGeometry(QtCore.QRect(580, 420, 200, 80))
+        self.startButton.setMinimumSize(QtCore.QSize(200, 80))
+        self.startButton.setStyleSheet("QPushButton {\n"
+"    background-color: #1E7878;\n"
+"    border: none;\n"
+"    color: rgb(39, 158, 158) ;    \n"
+"    border-top: 2px solid rgb(23, 95, 95);\n"
+"    border-left: 2px solid rgb(23, 95, 95);\n"
+"    border-right: 2px solid rgb(23, 95, 95);\n"
+"    border-bottom: 2px solid rgb(23, 95, 95);\n"
+"    border-radius: 25px;\n"
+"    font-family: \"Poppins\";\n"
+"    font-weight: bold;\n"
+"    font-size: 32px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(42, 167, 167);\n"
+"    border: none;\n"
+"    color:  rgb(26, 108, 108);\n"
+"    border-top: 2px solid rgb(41, 173, 173);\n"
+"    border-left: 2px solid rgb(41, 173, 173);\n"
+"    border-right: 2px solid rgb(41, 173, 173);\n"
+"    border-bottom: 2px solid rgb(41, 173, 173);\n"
+"\n"
+"    font-family: \"Poppins\";\n"
+"    font-weight: bold;\n"
+"    font-size: 32px;\n"
+"    transition-delay: 1s\n"
+"    \n"
+"}")
+        self.startButton.setObjectName("startButton")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(220, 140, 911, 231))
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap("asset/title.png"))
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(210, 420, 271, 271))
+        self.label_4.setText("")
+        self.label_4.setPixmap(QtGui.QPixmap("asset/friedrice2.png"))
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(840, 410, 281, 281))
+        self.label_5.setText("")
+        self.label_5.setPixmap(QtGui.QPixmap("asset/spaghetti.png"))
+        self.label_5.setObjectName("label_5")
+        self.label_2.raise_()
+        self.startButton.raise_()
+        self.label_3.raise_()
+        self.label.raise_()
+        self.label_4.raise_()
+        self.label_5.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+
+        self.startButton.clicked.connect(self.next_window)
+
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "LSI (Latest Semantic Index)"))
-        self.pushButton.setText(_translate("MainWindow", "Home"))
-        self.pushButton_2.setText(_translate("MainWindow", "Preprocessing"))
-        self.pushButton_3.setText(_translate("MainWindow", "Stemming"))
-        self.pushButton_4.setText(_translate("MainWindow", "Temu Balik"))
-        self.pushButton_5.setText(_translate("MainWindow", "Exit"))
-        self.label_2.setText(_translate("MainWindow", "Home"))
-        self.label_3.setText(_translate("MainWindow", "Preprocessing"))
-        self.label_4.setText(_translate("MainWindow", "Stemming"))
-        self.label_5.setText(_translate("MainWindow", "Temu Balik"))
+        self.startButton.setText(_translate("MainWindow", "START"))
+
+    def next_window(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_MenuWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        MainWindow.hide()
+
+
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui_main = Ui_MainWindow()
+    ui_main.setupUi(MainWindow)
+
+    MenuWindow = QtWidgets.QMainWindow()
+    ui_menu = Ui_MenuWindow()
+    ui_menu.setupUi(MenuWindow)
+
+    MainWindow.show()
+    sys.exit(app.exec_())
