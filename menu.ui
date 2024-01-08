@@ -291,6 +291,25 @@ font-size: 16px;</string>
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
+     <widget class="QLabel" name="label_file">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>360</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_5">
      <widget class="QLabel" name="label_4">
@@ -377,8 +396,8 @@ font-size: 16px;</string>
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>100</y>
+        <x>20</x>
+        <y>250</y>
         <width>421</width>
         <height>61</height>
        </rect>
@@ -401,8 +420,8 @@ font-size: 16px;</string>
      <widget class="QListView" name="listView">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>170</y>
+        <x>20</x>
+        <y>310</y>
         <width>611</width>
         <height>251</height>
        </rect>
@@ -433,6 +452,19 @@ font-size: 16px;</string>
       </property>
       <property name="text">
        <string>Temu Balik</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>611</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="inputMask">
+       <string/>
       </property>
      </widget>
     </widget>
